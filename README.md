@@ -1,6 +1,6 @@
 # AP Invoice Exception Assistant (Streamlit)
 
-Upload your purchase order data, then upload up to 10 vendor invoice PDFs at
+Upload your purchase order data, use can be able to upload up to 10 vendor invoice PDFs at
 once to reconcile them and ask "why was this flagged?" — every answer is
 grounded in the extracted data, not generated freely.
 
