@@ -24,13 +24,6 @@ straight into a GitHub repo:
 3. Click **View** on any processed invoice to see its line items, flagged
    exceptions, and ask follow-up questions in the chat box.
 
-## Deploy on Streamlit Community Cloud
-
-1. Create a new GitHub repo and drag-and-drop all the files above into it (root of the repo, no subfolders).
-2. Go to [share.streamlit.io](https://share.streamlit.io) → **Deploy an app**.
-3. Pick your repo/branch, and set **Main file path** to `streamlit_app.py`.
-4. Click **Deploy**.
-
 ## Run locally
 
 ```bash
