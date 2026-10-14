@@ -1,32 +1,72 @@
-# AP Invoice Exception Assistant (Streamlit)
+# AP INVOICE EXCEPTION ASSISTANT
 
-Upload your purchase order data, user can be able to upload up to 10 vendor invoice PDFs at
-once to reconcile them and ask "why was this flagged?" — every answer is
-grounded in the extracted data, not generated freely.
+## About This Project:
 
-## Files
+AP Invoice Exception Assistant is a Python and Streamlit application that helps users:
 
-All files live in one flat folder (no subfolders) so they can be dragged
-straight into a GitHub repo:
+- Extract invoice details from PDF documents.
+- Reconcile vendor invoices against purchase orders.
+- Identify invoice discrepancies and exceptions.
+- Review invoice line items and reconciliation results.
+- Ask questions about flagged invoices using an interactive chat interface.
+- Process multiple invoice PDFs in a single session.
 
-- `streamlit_app.py` — the app entry point
-- `extraction.py` — pulls header + line items out of the invoice PDF
-- `reconciliation.py` — compares invoice lines against the PO and flags mismatches
-- `chat_engine.py` — answers "why was this flagged?" from the computed data
-- `requirements.txt` — Python dependencies
+This project demonstrates PDF processing, data extraction, purchase order reconciliation, exception detection, and AI-assisted analysis.
 
-## How it works
+## Project Modules:
 
-1. Upload a JSON file describing your purchase order(s) — the sidebar shows
-   the expected format under "What should this file look like?".
-2. Upload up to 10 invoice PDFs at once, pick which PO each one reconciles
-   against, and click **Process**.
-3. Click **View** on any processed invoice to see its line items, flagged
-   exceptions, and ask follow-up questions in the chat box.
+| Module Name | Description | Files |
+|---|---|---|
+| Invoice Extraction | Extracts invoice headers and line items from PDFs | `extraction.py` |
+| Reconciliation Engine | Compares invoice data with purchase orders and identifies discrepancies | `reconciliation.py` |
+| Exception Analysis | Displays exception details and reconciliation results | `reconciliation.py` |
+| Invoice Q&A Assistant | Answers questions about invoice exceptions | `chat_engine.py` |
+| Streamlit Interface | Provides invoice uploads, processing, and review screens | `streamlit_app.py` |
+| Data Management | Handles purchase order data in JSON format | JSON files |
 
-## Run locally
+## Key Features:
 
-```bash
-pip install -r requirements.txt
-streamlit run streamlit_app.py
-```
+**Invoice PDF Extraction:**
+- Extract invoice details and line items.
+- Process multiple invoice documents.
+
+**Purchase Order Reconciliation:**
+- Compare invoice items against purchase order records.
+- Identify pricing and quantity discrepancies.
+
+**Exception Detection:**
+- Highlight flagged invoices.
+- Display exception details and explanations.
+
+**Interactive Q&A:**
+- Ask why an invoice was flagged.
+- Investigate available reconciliation results.
+
+**Batch Processing:**
+- Upload and process multiple invoices in one session.
+
+## Agile Project Development:
+
+- **Planning:** Identified the need to simplify invoice verification and exception analysis.
+- **Development:** Implemented PDF extraction and structured invoice data processing.
+- **Reconciliation:** Developed logic to compare invoices with purchase order information.
+- **Integration:** Connected reconciliation results to the Streamlit interface.
+- **Enhancement:** Added an interactive question-answering interface for investigating invoice exceptions.
+
+## Technologies Used:
+
+**Backend:**
+
+Python • PDF Extraction • Reconciliation Logic
+
+**Frontend:**
+
+Streamlit • Interactive Data Presentation
+
+**Data Processing:**
+
+JSON • Invoice Parsing • Exception Analysis
+
+**AI Assistance:**
+
+Invoice Question Answering • Context-Based Analysis
